@@ -1,6 +1,15 @@
+:root{
+  --color1: rgba(21, 30, 63, 1);
+  --color2: rgba(0, 8, 38, 1);
+  --color3: rgba(215, 221, 242, 1);
+  --color4: rgba(129, 148, 219, 1);
+  --color5: rgba(110, 128, 193, 1);
+}
+
 body,
 html,
 #root {
+  background-color: var(--color3);
   height: 100%;
 }
 
@@ -12,7 +21,7 @@ html {
   left: 0;
   position: fixed;
   width: 100%;
-  background-color: #010c3f;
+  background-color: var(--color4);
   text-align: center;
   color: #fff;
 
@@ -31,19 +40,32 @@ h2 {
 
 .App {
   height: 100%;
-  padding: 0 5% 10% 5%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 0 5%;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   color: #fff;
+  width: 100%;
 }
 
 .App-content {
+  position: fixed;
   display: flex;
-  justify-content: space-between;
+  padding-top: 150px;
+  width: 80%;
+  align-items: center;
+}
+
+.Message_active {
+  display:none;
+}
+
+.Message_inactive {
+  text-align: center;
   width: 100%;
+  color: blue;
+  background: red;
+  display: block;
+
 }
 
 .App-footer {
@@ -51,14 +73,11 @@ h2 {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: var(--color4);
     color: white;
     text-align: center;
 }
 
 @media only screen and (max-width: 1020px) {
-  .App-playlist {
-    align-items: center;
-    flex-direction: column;
-  }
+
 }

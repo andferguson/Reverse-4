@@ -1,0 +1,7 @@
+.Tile {
+  display: flex;
+  height: 50px;
+  width: 13%;
+  border: 1px solid black;
+  align-items: center;
+}

@@ -1,0 +1,7 @@
+.Settings {
+  width: 200px;
+  height: 400px;
+  background-color: var(--color5);
+  border: 1px solid blue;
+  padding-right: 5%;
+}

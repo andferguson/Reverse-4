@@ -11,5 +11,38 @@ new game
 
 Components:
 Tile (a single space on the game board, can be controlled by either player or neutral)
-Board (the game board, contains 42 tiles in a 6x7 area)
-gameButton (input buttons that dictate which column to shift)
+GameColumn (a column of 7 Tiles and a button to alter it)
+Game (the game board, contains 42 tiles in a 6x7 area)
+Settings (used to set the games settings before the game begins, locked when game starts)
+Multiplayer (uses PeerJS for peer-to-peer multiplayer connections)
+
+              App
+               |
+Multiplayer ---+--- Settings
+               |
+              Game
+               |
+           GameColumn
+               |
+              Tile
+
+
+Game structures
+2p-local
+pick first players
+user is first => wait for input (player 1)
+if win/lose/tie => display end state
+else => wait for input (player 2)
+loop
+2p-network
+pick first players
+if user is first => wait for input (player 1)
+if win/lose/tie => display end state
+else => ask for input (player 2)
+loop
+
+user is first => wait for input (player 1)
+if win/lose/tie => display end state
+else => ask for input (player 2)
+loop
+1p-vs ai
